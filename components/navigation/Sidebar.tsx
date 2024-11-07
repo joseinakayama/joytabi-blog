@@ -89,7 +89,7 @@ const Sidebar = () => {
         <div className="font-bold text-xl">じょい旅</div>
 
         <div className="text-sm">
-          世界一周をしているアラサー夫婦。役に立つ情報を発信していきます。
+        2025年1月から世界一周をしているアラサー夫婦。役に立つ情報を発信していきます。
         </div>
       </div>
 
