@@ -5,6 +5,7 @@ import { format } from "date-fns"
 import { microcms } from "@/lib/microcms"
 import Image from "next/image"
 import Link from "next/link"
+import { FaXTwitter, FaInstagram } from "react-icons/fa6";
 import {
   BlogType,
   ArchiveMonthType,
@@ -90,6 +91,15 @@ const Sidebar = () => {
 
         <div className="text-sm">
         2025年1月から世界一周をしているアラサー夫婦。役に立つ情報を発信していきます。
+        </div>
+
+        <div className="flex items-center justify-center gap-4">
+          <Link href="https://x.com/joitabi0602" className="hover:opacity-80">
+            <FaXTwitter size={30} />
+          </Link>
+          <Link href="https://www.instagram.com/joytabi62/" className="hover:opacity-80">
+            <FaInstagram size={30} />
+          </Link>
         </div>
       </div>
 
