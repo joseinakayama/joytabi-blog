@@ -1,4 +1,5 @@
 import { Suspense } from "react"
+import { Metadata } from "next";
 import { microcms } from "@/lib/microcms"
 import { AboutType } from "@/types"
 import About from "@/components/about/About"
@@ -9,6 +10,13 @@ import * as cheerio from "cheerio"
 import "highlight.js/styles/github-dark.css"
 
 export const revalidate = 0
+
+export const generateMetadata = async (): Promise<Metadata> => {
+  return {
+    title: 'アバウト | じょい旅 世界一周',
+    description: 'じょい旅について説明しています。'
+  };
+}
 
 // アバウトページ
 const AboutPage = async () => {

@@ -1,4 +1,5 @@
 import { Suspense } from "react"
+import { Metadata } from "next";
 import { microcms } from "@/lib/microcms"
 import { BlogType } from "@/types"
 import Top from "@/components/top/Top"
@@ -7,6 +8,14 @@ import LayoutWithSidebar from "@/components/layout/LayoutWithSidebar"
 import Loading from "@/app/loading"
 
 export const revalidate = 0
+
+export const generateMetadata = async (): Promise<Metadata> => {
+  return {
+    title: 'じょい旅 世界一周',
+    description: 'じょい旅 世界一周は世界一周についての情報を発信するサイトです。'
+  };
+}
+
 
 // メインページ
 const HomePage = async () => {

@@ -1,4 +1,5 @@
 import { Suspense } from "react"
+import { Metadata } from "next";
 import { microcms } from "@/lib/microcms"
 import { BlogType } from "@/types"
 import BlogDetail from "@/components/blog/BlogDetail"
@@ -14,6 +15,24 @@ interface BlogDetailPageProps {
   params: {
     blogId: string
   }
+}
+
+export const generateMetadata = async ({ params }: BlogDetailPageProps): Promise<Metadata> => {
+  // ブログの詳細データを取得する関数
+  const { blogId } = params
+
+  let blog: BlogType | null = null
+  let relatedBlogs: BlogType[] = []
+
+  blog = await microcms.get({
+    endpoint: "blog",
+    contentId: blogId,
+  })
+
+  return {
+    title: `${blog?.title} | じょい旅 世界一周`,
+    description: blog?.title
+  };
 }
 
 // ブログ詳細ページ

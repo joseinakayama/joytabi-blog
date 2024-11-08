@@ -1,4 +1,5 @@
 import { Suspense } from "react"
+import { Metadata } from "next";
 import { microcms } from "@/lib/microcms"
 import { BlogType } from "@/types"
 import { blogPerPage } from "@/lib/utils"
@@ -7,6 +8,14 @@ import LayoutWithSidebar from "@/components/layout/LayoutWithSidebar"
 import Loading from "@/app/loading"
 
 export const revalidate = 0
+
+export const generateMetadata = async (): Promise<Metadata> => {
+  return {
+    title: 'アーカイブ | じょい旅 世界一周',
+    description: 'じょい旅のブログのアーカイブを表示しています。'
+  };
+}
+
 
 interface ArchivePageProps {
   params: {
