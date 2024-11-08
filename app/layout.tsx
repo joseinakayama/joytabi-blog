@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+import type { Viewport } from "next";
 import { M_PLUS_1 } from "next/font/google"
 import QueryProvider from "@/components/providers/QueryProvider"
 import "./globals.css";

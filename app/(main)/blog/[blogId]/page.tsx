@@ -22,7 +22,6 @@ export const generateMetadata = async ({ params }: BlogDetailPageProps): Promise
   const { blogId } = params
 
   let blog: BlogType | null = null
-  let relatedBlogs: BlogType[] = []
 
   blog = await microcms.get({
     endpoint: "blog",
