@@ -13,8 +13,8 @@ export const revalidate = 0
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: 'アバウト | じょい旅 世界一周',
-    description: 'じょい旅について説明しています。'
+    title: 'アバウト | じょいたび 世界一周',
+    description: 'じょいたびについて説明しています。'
   };
 }
 

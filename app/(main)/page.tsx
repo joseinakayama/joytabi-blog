@@ -11,8 +11,8 @@ export const revalidate = 0
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: 'じょい旅 世界一周',
-    description: 'じょい旅 世界一周は世界一周についての情報を発信するサイトです。'
+    title: 'じょいたび 世界一周',
+    description: 'じょいたび 世界一周は世界一周についての情報を発信するサイトです。'
   };
 }
 
