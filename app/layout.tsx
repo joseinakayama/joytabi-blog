@@ -10,8 +10,8 @@ const mPlus1 = M_PLUS_1({
 
 // export const metadata: Metadata = {
 //   title: {
-//     template: "じょい旅 世界一周ブログ",
-//     default: "じょい旅 世界一周ブログ",
+//     template: "じょいたび 世界一周ブログ",
+//     default: "じょいたび 世界一周ブログ",
 //   },
 //   description: '2025年1月から世界一周をしているアラサー夫婦。役に立つ情報を発信していきます。',
 // }

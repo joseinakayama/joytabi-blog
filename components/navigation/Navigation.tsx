@@ -31,7 +31,7 @@ const Navigation = () => {
     <header>
       <div className="mx-auto max-w-screen-lg px-2 py-8">
         <Link href="/" className="font-bold text-xl">
-          じょい旅 世界一周
+          じょいたび 世界一周
         </Link>
       </div>
 
