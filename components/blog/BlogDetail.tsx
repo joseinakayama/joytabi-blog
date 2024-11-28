@@ -4,6 +4,8 @@ import { BlogType } from "@/types"
 import { format } from "date-fns"
 import Image from "next/image"
 import BlogItem from "@/components/blog/BlogItem"
+import { TableOfContents } from "@/components/blog/TalbleOfContent"
+import { renderToc } from '../../lib/render-toc';
 
 interface BlogDetailProps {
   blog: BlogType
@@ -13,6 +15,7 @@ interface BlogDetailProps {
 // ブログ詳細
 const BlogDetail = ({ blog, relatedBlogs }: BlogDetailProps) => {
   const categoryColor = blog.category.color || "gray"
+  const toc = renderToc(blog.content);
 
   return (
     <div className="space-y-10">
@@ -40,6 +43,8 @@ const BlogDetail = ({ blog, relatedBlogs }: BlogDetailProps) => {
           {blog.category.name}
         </div>
       </div>
+
+      <TableOfContents toc={toc} />
 
       <div dangerouslySetInnerHTML={{ __html: blog.content }} />
 

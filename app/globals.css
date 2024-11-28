@@ -97,6 +97,14 @@ body {
   }
 }
 
+/* 目次 */
+.contents_head_h3 {
+  padding-left: 24px;
+}
+.contents_head_h4 {
+  padding-left: 48px;
+}
+
 /* カスタムクラス */
 
 /* ハイライト */
