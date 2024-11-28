@@ -110,10 +110,11 @@ body {
 }
 
 /* ボタン */
+p:has(a > .button-01) {
+  text-align: center;
+}
 a:has(.button-01) {
   text-decoration: none;
-  display: block;
-  text-align: center;
 }
 .button-01 {
   display: inline-block;
@@ -147,4 +148,32 @@ a:has(.button-01) {
   .button-01 {
     padding: 13.5px 46.23px;
   }
+}
+
+/* 注意文、補足分 */
+.c-caution, .c-supplement {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 20px 20px 20px 10px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+.c-caution::before, .c-supplement::before{
+  content: "";
+  flex: 0 0 24px;
+  height: 24px;
+  background-size: contain;
+}
+.c-caution {
+  background-color: #f3d6d6;
+}
+.c-caution::before {
+  background: url('img/icon_warning.svg') no-repeat center center;
+}
+.c-supplement {
+  background-color: #E8F3D5;
+}
+.c-supplement::before {
+  background: url('img/icon_supplement.svg') no-repeat center center;
 }
