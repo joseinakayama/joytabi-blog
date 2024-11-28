@@ -96,3 +96,13 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* カスタムクラス */
+.highlight {
+  font-weight: bold;
+  background: linear-gradient(
+    transparent 50%,
+    #fcff52 60% 90%,
+    transparent 90%
+  );
+}
