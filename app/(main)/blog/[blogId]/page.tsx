@@ -88,10 +88,10 @@ const BlogDetailPage = async ({ params }: BlogDetailPageProps) => {
         $(element).addClass("my-5")
       })
       $("h2").each((_, element) => {
-        $(element).addClass("text-3xl font-bold my-7 border-b pb-2")
+        $(element).addClass("text-3xl font-bold my-7 p-3 c-h2")
       })
       $("h3").each((_, element) => {
-        $(element).addClass("text-2xl font-bold my-7")
+        $(element).addClass("text-2xl font-bold my-7 pl-3 border-blue-100 border-solid border-l-4")
       })
       $("h4").each((_, element) => {
         $(element).addClass("text-xl font-bold my-6")
