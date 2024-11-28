@@ -185,3 +185,12 @@ a:has(.button-01) {
 .c-supplement::before {
   background: url('img/icon_supplement.svg') no-repeat center center;
 }
+
+/* リストブロック */
+.c-list-block {
+  display: inline-block;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #F2F7FF;
+  font-weight: bold;
+}
