@@ -17,7 +17,7 @@ const BlogDetail = ({ blog, relatedBlogs }: BlogDetailProps) => {
   return (
     <div className="space-y-10">
       <div className="space-y-2">
-        <div className="font-bold text-2xl">{blog.title}</div>
+        <h1 className="font-bold text-2xl">{blog.title}</h1>
         <div className="text-sm">
           {format(new Date(blog.createdAt), "yyy/MM/dd")}
         </div>
