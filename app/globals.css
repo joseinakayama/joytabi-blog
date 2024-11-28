@@ -98,6 +98,8 @@ body {
 }
 
 /* カスタムクラス */
+
+/* ハイライト */
 .highlight {
   font-weight: bold;
   background: linear-gradient(
@@ -105,4 +107,44 @@ body {
     #fcff52 60% 90%,
     transparent 90%
   );
+}
+
+/* ボタン */
+a:has(.button-01) {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+.button-01 {
+  display: inline-block;
+  background-color: #EE7B1C;
+  box-shadow: 0 4px 9px hsla(38, 100%, 30%, 0.27);
+  padding: 19px 67px 18px;
+  border-radius: 60px;
+  color: #fff;
+  position: relative;
+  font-weight: bold;
+}
+.button-01::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #fff;
+  line-height: 1;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 0.375em 0.64952em;
+  border-left-color: currentColor;
+  border-right: 0;
+}
+@media (max-width: 765px) {
+  .button-01 {
+    padding: 13.5px 46.23px;
+  }
 }

@@ -87,19 +87,19 @@ const BlogDetailPage = async ({ params }: BlogDetailPageProps) => {
       $("p").each((_, element) => {
         $(element).addClass("my-5")
       })
-      $("h1").each((_, element) => {
+      $("h2").each((_, element) => {
         $(element).addClass("text-3xl font-bold my-7 border-b pb-2")
       })
-      $("h2").each((_, element) => {
+      $("h3").each((_, element) => {
         $(element).addClass("text-2xl font-bold my-7")
       })
-      $("h3").each((_, element) => {
+      $("h4").each((_, element) => {
         $(element).addClass("text-xl font-bold my-6")
       })
-      $("h4").each((_, element) => {
+      $("h5").each((_, element) => {
         $(element).addClass("text-lg font-bold my-5")
       })
-      $("h5").each((_, element) => {
+      $("h6").each((_, element) => {
         $(element).addClass("text-md font-bold my-5")
       })
       $("ul").each((_, element) => {
