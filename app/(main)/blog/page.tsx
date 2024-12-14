@@ -11,8 +11,8 @@ export const revalidate = 0
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: 'ブログ一覧 | じょいたび 世界一周',
-    description: 'じょいたびのブログの一覧を表示しています。'
+    title: 'ブログ一覧 | じょい旅 世界一周',
+    description: 'じょい旅のブログの一覧を表示しています。'
   };
 }
 

@@ -29,7 +29,7 @@ export const generateMetadata = async ({ params }: BlogDetailPageProps): Promise
   })
 
   return {
-    title: `${blog?.title} | じょいたび 世界一周`,
+    title: `${blog?.title} | じょい旅 世界一周`,
     description: blog?.title
   };
 }
