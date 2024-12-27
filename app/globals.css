@@ -101,6 +101,10 @@ body {
   }
 }
 
+.bg-main-color {
+  background: #00AFAF;
+}
+
 /* 目次 */
 .contents_head_h3 {
   margin-left: 24px;

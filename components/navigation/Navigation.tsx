@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
+import Image from "next/image"
 
 const items = [
   {
@@ -29,13 +30,17 @@ const Navigation = () => {
 
   return (
     <header>
-      <div className="mx-auto max-w-screen-lg px-2 py-8">
-        <Link href="/" className="font-bold text-xl">
-          じょい旅 世界一周
+      <div className="mx-auto max-w-screen-lg px-2 py-4 text-center md:text-left md:py-6">
+        <Link href="/" className="relative inline-block w-40 h-16 md:w-48 md:h-20">
+          <Image
+            src="logo.svg"
+            fill
+            alt="じょい旅"
+          />
         </Link>
       </div>
 
-      <div className="bg-gray-100">
+      <div className="bg-main-color">
         <div className="mx-auto max-w-screen-lg px-2">
           <div className="flex items-center justify-between text-sm font-bold">
             {items.map((item, index) => (
@@ -43,7 +48,7 @@ const Navigation = () => {
                 key={index}
                 href={item.href}
                 className={cn(
-                  "border-r border-l border-white py-3 text-center w-full hover:bg-black hover:text-white",
+                  "border-r border-l border-white py-3 text-center text-white w-full hover:bg-black",
                   pathname === item.href && "bg-black text-white"
                 )}
               >
