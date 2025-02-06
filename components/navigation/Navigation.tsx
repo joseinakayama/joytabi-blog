@@ -3,7 +3,6 @@
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-// import Image from "next/image";
 
 const items = [
   {
