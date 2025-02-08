@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import { Autoplay, Navigation, Pagination } from "swiper/modules"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { format } from "date-fns"
-import { BlogType } from "@/types"
-import Image from "next/image"
-import Link from "next/link"
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { format } from "date-fns";
+import { BlogType } from "@/types";
+import Image from "next/image";
+import Link from "next/link";
 
-import "swiper/css"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 interface TopProps {
-  blogs: BlogType[]
+  blogs: BlogType[];
 }
 
 // トップ
@@ -26,14 +26,13 @@ const Top = ({ blogs }: TopProps) => {
       slidesPerView: 2,
       spaceBetween: 0,
     },
-  }
+  };
 
   return (
     <Swiper
       modules={[Navigation, Pagination, Autoplay]}
       breakpoints={slideSettings}
-      slidesPerView={"auto"}
-      centeredSlides={true}
+      // centeredSlides={true}
       loop={true}
       speed={1000}
       autoplay={{
@@ -46,12 +45,12 @@ const Top = ({ blogs }: TopProps) => {
       className="max-w-full"
     >
       {blogs.map((blog) => {
-        const categoryColor = blog.category.color || "gray"
+        const categoryColor = blog.category.color || "gray";
 
         return (
           <SwiperSlide key={blog.id}>
             <Link href={`/blog/${blog.id}`}>
-              <div className="aspect-video relative overflow-hidden group max-h-[600px]">
+              <div className="aspect-video relative group max-h-[600px]">
                 <Image
                   src={blog.image.url}
                   fill
@@ -66,20 +65,17 @@ const Top = ({ blogs }: TopProps) => {
                     <div>{blog.title}</div>
                   </div>
 
-                  <div
-                    className="absolute top-0 left-0 text-xs text-white py-1.5 px-4"
-                    style={{ backgroundColor: categoryColor }}
-                  >
+                  <div className="absolute top-0 left-0 text-xs text-white py-1.5 px-4" style={{ backgroundColor: categoryColor }}>
                     {blog.category.name}
                   </div>
                 </div>
               </div>
             </Link>
           </SwiperSlide>
-        )
+        );
       })}
     </Swiper>
-  )
-}
+  );
+};
 
-export default Top
+export default Top;
